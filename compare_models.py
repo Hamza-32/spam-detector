@@ -1,13 +1,13 @@
 """Legacy wrapper for backward compatibility.
 
-Use `python main.py ...` for the canonical full pipeline.
+Use `python main.py ...` for the canonical pipeline.
 """
 
 from main import main as pipeline_main
 
 
 def main() -> None:
-    print("[legacy] spam_detector_complete.py is deprecated. Redirecting to main.py")
+    print("[legacy] compare_models.py is deprecated. Redirecting to main.py")
     pipeline_main()
 
 

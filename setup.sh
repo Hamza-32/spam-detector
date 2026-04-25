@@ -1,17 +1,21 @@
 #!/bin/bash
-# Run this ONCE to set up your environment
-echo "Creating virtual environment..."
-python3 -m venv venv
+set -e
 
-echo "Activating..."
+if [ ! -d "venv" ]; then
+	python3 -m venv venv
+fi
+
 source venv/bin/activate
-
-echo "Installing packages..."
-pip install --upgrade pip
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 
 echo ""
-echo "Setup complete!"
-echo "To run the project:"
-echo "  source venv/bin/activate"
-echo "  python spam_detector_complete.py"
+echo "Base environment setup complete."
+echo "Optional deep-learning packages:"
+echo "  pip install -r requirements_dl.txt"
+echo ""
+echo "Run full pipeline:"
+echo "  python main.py --quick"
+echo ""
+echo "Run interactive predictor:"
+echo "  python predict.py"

@@ -11,7 +11,10 @@ venv/
 .ipynb_checkpoints/
 Thumbs.db
 Desktop.ini
-results_dashboard.png
-nb_model.pkl
-lr_model.pkl
-tfidf_vectorizer.pkl
+
+# Project-specific ignores
+data/SMSSpamCollection
+data/sms+spam+collection/
+models/*.pkl
+models/*.keras
+models/*.h5
